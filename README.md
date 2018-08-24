@@ -29,20 +29,18 @@
 # 2. Interface (API) 정의 #
   * ## User ##
     - ### Post: 유저 회원가입 ###
-     + route: /user/register
      * request: {email:String, password:String, group:"user" | "manager"}
      * response: {success:Boolean}
-    - ### Post: 유저 로그인 ###
-     + route: /user/login
+    - ### Get: 유저 로그인 ###
      + request: {email:String, password:String}
      + response: {success:Boolean}
   * ## Market ##
     - ### Post: 사업장생성 ###
-     + request: {userId:String, name:String, bankname:String, accountNumber:String, lat:Double, lng:Double}
+     + request: {userId:String, name:String, bankName:String, accountNumber:String, lat:Double, lng:Double}
      + response: {success:Boolean}
     - ### Get: 사업장정보가져오기 ###
      + request: {marketId:String}
-     + response: {id:String, creationDate:Int, name:String, backName:String, accountNumber:String, lat:Double, lng:Double, userId: String}
+     + response: {id:String, creationDate:Int, name:String, bankName:String, accountNumber:String, lat:Double, lng:Double, userId: String}
     - ### Patch: 가까운 사업장 리스트 가져오기 (market id list) ###
      + request: {lat:Double, lng:Double}
      + response: {items: [String, ...]}
@@ -57,7 +55,7 @@
      + request: {marketId:String}
      + response: {items: [String, ...]}
     - ### Delete: 결제 기록 삭제 (결제 확인) ###
-     + request: {marketId: String}
+     + request: {passId: String}
      + response: {success: Boolean}
     
 3. 클라이언트 API 정의 후 구현 ( 0 % )
