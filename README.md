@@ -55,7 +55,7 @@
      + request: {marketId:String}
      + response: {items: [String, ...]}
     - ### Delete: 결제 기록 삭제 (결제 확인) ###
-     + request: {marketId: String}
+     + request: {passId: String}
      + response: {success: Boolean}
     
 3. 클라이언트 API 정의 후 구현 ( 0 % )
