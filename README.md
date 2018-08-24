@@ -55,5 +55,5 @@
      + request: {marketId:String}
      + response: {items: [String, ...]}
     
-2. 클라이언트 API 정의 후 구현 ( 0 % )
-3. 서버 API 정의 후 구현 ( 0 % )
+3. 클라이언트 API 정의 후 구현 ( 0 % )
+4. 서버 API 정의 후 구현 ( 0 % )
