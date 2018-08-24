@@ -4,11 +4,11 @@
   * Path 
   1. User
     1. Post: 유저 회원가입
-    request: {email:String, password:String, group:"user" | "manager" | "admin"}, 
-    response: {success:Boolean}
+    *request: {email:String, password:String, group:"user" | "manager" | "admin"}, 
+    *response: {success:Boolean}
     2. Get: 유저 로그인
-    request: {email:String, password:String}
-    response: {success:Boolean}
+    *request: {email:String, password:String}
+    *response: {success:Boolean}
   2. Market
     1. Post: 사업장생성
     request: {userId:String, name:String, bankname:String, accountNumber:String, lat:Double, lng:Double}
