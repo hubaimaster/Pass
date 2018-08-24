@@ -6,7 +6,7 @@
    - creationDate: Int (Unixtime)
    - name: String 
    - password: String
-   - group: String ("user" | "manager")
+   - group: "user" | "manager"
    - email: String (로그인할때 사용)
    - marketId: String (사장님이 가게 등록할경우 사용)
    - money: Int
