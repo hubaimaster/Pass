@@ -54,6 +54,9 @@
     - ### Patch: 결제 기록 리스트 가져오기 (최근순) ###
      + request: {marketId:String}
      + response: {items: [String, ...]}
+    - ### Delete: 결제 기록 삭제 (결제 확인) ###
+     + request: {marketId: String}
+     + response: {success: Boolean}
     
 3. 클라이언트 API 정의 후 구현 ( 0 % )
 4. 서버 API 정의 후 구현 ( 0 % )
