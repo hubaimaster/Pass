@@ -48,10 +48,10 @@
     - ### Post: 결제 이벤트 발생 ###
      + request: {userId:String, marketId:String, money:Int, tableName:String}
      + response: {success:Boolean}
-    - ### Get: 결제 기록 가져오기 (최근순) ###
+    - ### Get: 결제 기록 가져오기  ###
      + request: {passId: String}
-     + response: {items: [String, ...]}
-    - ### Patch: 결제 기록 리스트 가져오기 ###
+     + response: {id: String, creationDate: Int, userId: String, marketId: String, money: Int}
+    - ### Patch: 결제 기록 리스트 가져오기 (최근순) ###
      + request: {marketId:String}
      + response: {items: [String, ...]}
     
