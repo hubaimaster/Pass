@@ -17,7 +17,7 @@
      + response: {id:String, creationDate:Int, name:String, backName:String, accountNumber:String, lat:Double, lng:Double, userId: String}
     - ### Patch: 가까운 사업장 리스트 가져오기 (market id list) ###
      + request: {lat:Double, lng:Double}
-     + response: {items: [String, ...]
+     + response: {items: [String, ...]}
   * ## Pass ##
     - ### Post: 결제 이벤트 발생 ###
      + request: {userId:String, marketId:String, money:Int, tableName:String}
