@@ -48,11 +48,12 @@
     - ### Post: 결제 이벤트 발생 ###
      + request: {userId:String, marketId:String, money:Int, tableName:String}
      + response: {success:Boolean}
-    - ### Patch: 결제 기록 리스트 가져오기 ###
-     + request: {marketId:String}
-     + response: {items: [String, ...]}
     - ### Get: 결제 기록 가져오기 (최근순) ###
      + request: {passId: String}
      + response: {items: [String, ...]}
+    - ### Patch: 결제 기록 리스트 가져오기 ###
+     + request: {marketId:String}
+     + response: {items: [String, ...]}
+    
 2. 클라이언트 API 정의 후 구현 ( 0 % )
 3. 서버 API 정의 후 구현 ( 0 % )
