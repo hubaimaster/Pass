@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BF15CBA50EC5F70DF45A6CC4 /* Pods_pass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E50F9C81415E984F06C146 /* Pods_pass.framework */; };
 		E5D209112130444F00232F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D209102130444F00232F61 /* AppDelegate.swift */; };
-		E5D209132130444F00232F61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D209122130444F00232F61 /* ViewController.swift */; };
+		E5D209132130444F00232F61 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D209122130444F00232F61 /* EntryViewController.swift */; };
 		E5D209162130444F00232F61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D209142130444F00232F61 /* Main.storyboard */; };
 		E5D209182130445000232F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5D209172130445000232F61 /* Assets.xcassets */; };
 		E5D2091B2130445000232F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D209192130445000232F61 /* LaunchScreen.storyboard */; };
@@ -25,6 +25,10 @@
 		E5D2095F2130559B00232F61 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2095E2130559B00232F61 /* User.swift */; };
 		E5D20961213055A200232F61 /* Pass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D20960213055A200232F61 /* Pass.swift */; };
 		E5D20963213055AA00232F61 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D20962213055AA00232F61 /* Market.swift */; };
+		E5D20967213063EF00232F61 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D20965213063EF00232F61 /* Network.swift */; };
+		E5D20968213063EF00232F61 /* AlamofireNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D20966213063EF00232F61 /* AlamofireNetwork.swift */; };
+		E5D2096A2130648900232F61 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D209692130648900232F61 /* Config.swift */; };
+		E5D2096C2130661300232F61 /* AppTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2096B2130661300232F61 /* AppTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +54,7 @@
 		C9E50F9C81415E984F06C146 /* Pods_pass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D2090D2130444F00232F61 /* pass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D209102130444F00232F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E5D209122130444F00232F61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E5D209122130444F00232F61 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		E5D209152130444F00232F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5D209172130445000232F61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5D2091A2130445000232F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +75,10 @@
 		E5D2095E2130559B00232F61 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E5D20960213055A200232F61 /* Pass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pass.swift; sourceTree = "<group>"; };
 		E5D20962213055AA00232F61 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
+		E5D20965213063EF00232F61 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = pass/Network/Network.swift; sourceTree = SOURCE_ROOT; };
+		E5D20966213063EF00232F61 /* AlamofireNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlamofireNetwork.swift; path = pass/Network/AlamofireNetwork.swift; sourceTree = SOURCE_ROOT; };
+		E5D209692130648900232F61 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		E5D2096B2130661300232F61 /* AppTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,9 +149,11 @@
 		E5D2090F2130444F00232F61 /* pass */ = {
 			isa = PBXGroup;
 			children = (
+				E5D209692130648900232F61 /* Config.swift */,
+				E5D2096B2130661300232F61 /* AppTest.swift */,
 				E5D2093E2130504900232F61 /* Network */,
 				E5D209102130444F00232F61 /* AppDelegate.swift */,
-				E5D209122130444F00232F61 /* ViewController.swift */,
+				E5D209122130444F00232F61 /* EntryViewController.swift */,
 				E5D209142130444F00232F61 /* Main.storyboard */,
 				E5D209172130445000232F61 /* Assets.xcassets */,
 				E5D209192130445000232F61 /* LaunchScreen.storyboard */,
@@ -182,6 +192,7 @@
 		E5D209412130507A00232F61 /* DAO */ = {
 			isa = PBXGroup;
 			children = (
+				E5D209642130637A00232F61 /* HTTP */,
 				E5D2095D2130558500232F61 /* Model */,
 				E5D2094A213050B700232F61 /* AWSImp */,
 				E5D209422130508300232F61 /* Protocol */,
@@ -217,6 +228,15 @@
 				E5D20962213055AA00232F61 /* Market.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E5D209642130637A00232F61 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				E5D20966213063EF00232F61 /* AlamofireNetwork.swift */,
+				E5D20965213063EF00232F61 /* Network.swift */,
+			);
+			path = HTTP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,11 +393,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-pass/Pods-pass-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActionKit/ActionKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/JDStatusBarNotification/JDStatusBarNotification.framework",
+				"${BUILT_PRODUCTS_DIR}/STPopup/STPopup.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UIScrollView-InfiniteScroll/UIScrollView_InfiniteScroll.framework",
+				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JDStatusBarNotification.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/STPopup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIScrollView_InfiniteScroll.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -391,14 +423,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5D209132130444F00232F61 /* ViewController.swift in Sources */,
+				E5D20967213063EF00232F61 /* Network.swift in Sources */,
+				E5D209132130444F00232F61 /* EntryViewController.swift in Sources */,
 				E5D2094E213050DD00232F61 /* AWSPassDAO.swift in Sources */,
+				E5D2096A2130648900232F61 /* Config.swift in Sources */,
 				E5D20950213050E900232F61 /* AWSMarketDAO.swift in Sources */,
 				E5D209402130505C00232F61 /* API.swift in Sources */,
 				E5D2094C213050D500232F61 /* AWSUserDAO.swift in Sources */,
 				E5D20948213050AC00232F61 /* MarketDAO.swift in Sources */,
 				E5D209112130444F00232F61 /* AppDelegate.swift in Sources */,
+				E5D2096C2130661300232F61 /* AppTest.swift in Sources */,
 				E5D20946213050A300232F61 /* PassDAO.swift in Sources */,
+				E5D20968213063EF00232F61 /* AlamofireNetwork.swift in Sources */,
 				E5D20961213055A200232F61 /* Pass.swift in Sources */,
 				E5D2095F2130559B00232F61 /* User.swift in Sources */,
 				E5D209442130509B00232F61 /* UserDAO.swift in Sources */,

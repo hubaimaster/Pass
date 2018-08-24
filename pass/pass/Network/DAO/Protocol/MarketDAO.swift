@@ -10,6 +10,6 @@ import Foundation
 
 protocol MarketDAO {
     func create(userId: String, name: String, bankName: String, accountNumber:String, lat:Double, lng:Double, callback: (Bool)->Void)
-    func get(marketId:String, callback: (Market)->Void)
+    func get(marketId:String, callback: (Market?)->Void)
     func list(lat:Double, lng:Double, callback: ([Market])->Void)
 }

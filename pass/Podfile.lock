@@ -1,16 +1,40 @@
 PODS:
+  - ActionKit (2.3.2)
+  - Alamofire (4.7.2)
+  - JDStatusBarNotification (1.5.6)
+  - STPopup (1.8.3)
   - SwiftyJSON (4.1.0)
+  - UIScrollView-InfiniteScroll (1.1.0)
+  - "UITextView+Placeholder (1.2.0)"
 
 DEPENDENCIES:
+  - ActionKit
+  - Alamofire
+  - JDStatusBarNotification
+  - STPopup
   - SwiftyJSON (~> 4.0)
+  - UIScrollView-InfiniteScroll
+  - "UITextView+Placeholder"
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ActionKit
+    - Alamofire
+    - JDStatusBarNotification
+    - STPopup
     - SwiftyJSON
+    - UIScrollView-InfiniteScroll
+    - "UITextView+Placeholder"
 
 SPEC CHECKSUMS:
+  ActionKit: cf7ca5781f4a43342384d872105fadd58985f416
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  JDStatusBarNotification: d5829a8f2f291b23b8a54b87fac8bf2549945a2f
+  STPopup: da1167250a01584af7bcccb898653185f223ec46
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  UIScrollView-InfiniteScroll: 3ef456bcbe759c19f510a383cff96e6647c98c98
+  "UITextView+Placeholder": 77680995fcdd07c3f52ec92fe1150874a2ac89ff
 
-PODFILE CHECKSUM: 1e01d7b19e0e4ad9d4c3958200d062cf7d5d4c6b
+PODFILE CHECKSUM: 52c8b69c1b3794bf9533071b13518a041cd5c457
 
 COCOAPODS: 1.5.2

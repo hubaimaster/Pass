@@ -9,5 +9,12 @@
 import Foundation
 
 struct API {
-    static let userDAO:
+    static let http: Network = AlamofireNetwork()
+    
+    struct model {
+        static let user: UserDAO = AWSUserDAO()
+        static let pass: PassDAO = AWSPassDAO()
+        static let market: MarketDAO = AWSMarketDAO()
+    }
+    
 }
