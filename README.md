@@ -1,9 +1,35 @@
 # Pass
 ## To do list ##
-# 1. Interface (API) 정의 #
+# 1. Model 정의 #
+  * ## User ##
+   - id: String (UUID4)
+   - creationDate: Int (Unixtime)
+   - name: String 
+   - password: String
+   - group: String ("user" | "manager")
+   - email: String (로그인할때 사용)
+   - marketId: String (사장님이 가게 등록할경우 사용)
+   - money: Int
+  * ## Market ##
+   - id: String (UUID4)
+   - creationDate: Int (Unixtime)
+   - name: String
+   - bankName: String
+   - accountNumber: String
+   - lat (Double)
+   - lng (Double)
+   - userId (String)
+  * ## Pass ##
+   - id: String (UUID4)
+   - creationDate: Int (Unixtime)
+   - userId: String
+   - marketId: String
+   - money: Int
+  
+# 2. Interface (API) 정의 #
   * ## User ##
     - ### Post: 유저 회원가입 ###
-     * request: {email:String, password:String, group:"user" | "manager" | "admin"}
+     * request: {email:String, password:String, group:"user" | "manager"}
      * response: {success:Boolean}
     - ### Get: 유저 로그인 ###
      + request: {email:String, password:String}
