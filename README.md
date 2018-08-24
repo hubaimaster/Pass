@@ -29,9 +29,11 @@
 # 2. Interface (API) 정의 #
   * ## User ##
     - ### Post: 유저 회원가입 ###
+     + route: /user/register
      * request: {email:String, password:String, group:"user" | "manager"}
      * response: {success:Boolean}
-    - ### Get: 유저 로그인 ###
+    - ### Post: 유저 로그인 ###
+     + route: /user/login
      + request: {email:String, password:String}
      + response: {success:Boolean}
   * ## Market ##
@@ -55,7 +57,7 @@
      + request: {marketId:String}
      + response: {items: [String, ...]}
     - ### Delete: 결제 기록 삭제 (결제 확인) ###
-     + request: {passId: String}
+     + request: {marketId: String}
      + response: {success: Boolean}
     
 3. 클라이언트 API 정의 후 구현 ( 0 % )
