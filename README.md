@@ -1,6 +1,6 @@
 # Pass
 ## To do list ##
-1. # Interface (API) 정의 #
+# 1. Interface (API) 정의 #
   * ## User ##
     - ### Post: 유저 회원가입 ###
      * request: {email:String, password:String, group:"user" | "manager" | "admin"}, 
