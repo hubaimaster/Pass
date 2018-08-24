@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF15CBA50EC5F70DF45A6CC4 /* Pods_pass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E50F9C81415E984F06C146 /* Pods_pass.framework */; };
 		E5D209112130444F00232F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D209102130444F00232F61 /* AppDelegate.swift */; };
 		E5D209132130444F00232F61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D209122130444F00232F61 /* ViewController.swift */; };
 		E5D209162130444F00232F61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D209142130444F00232F61 /* Main.storyboard */; };
@@ -14,6 +15,16 @@
 		E5D2091B2130445000232F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D209192130445000232F61 /* LaunchScreen.storyboard */; };
 		E5D209262130445000232F61 /* passTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D209252130445000232F61 /* passTests.swift */; };
 		E5D209312130445000232F61 /* passUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D209302130445000232F61 /* passUITests.swift */; };
+		E5D209402130505C00232F61 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2093F2130505C00232F61 /* API.swift */; };
+		E5D209442130509B00232F61 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D209432130509B00232F61 /* UserDAO.swift */; };
+		E5D20946213050A300232F61 /* PassDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D20945213050A300232F61 /* PassDAO.swift */; };
+		E5D20948213050AC00232F61 /* MarketDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D20947213050AC00232F61 /* MarketDAO.swift */; };
+		E5D2094C213050D500232F61 /* AWSUserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2094B213050D500232F61 /* AWSUserDAO.swift */; };
+		E5D2094E213050DD00232F61 /* AWSPassDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2094D213050DD00232F61 /* AWSPassDAO.swift */; };
+		E5D20950213050E900232F61 /* AWSMarketDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2094F213050E900232F61 /* AWSMarketDAO.swift */; };
+		E5D2095F2130559B00232F61 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2095E2130559B00232F61 /* User.swift */; };
+		E5D20961213055A200232F61 /* Pass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D20960213055A200232F61 /* Pass.swift */; };
+		E5D20963213055AA00232F61 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D20962213055AA00232F61 /* Market.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		017667527B51668F6FB5A8CB /* Pods-pass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pass.release.xcconfig"; path = "Pods/Target Support Files/Pods-pass/Pods-pass.release.xcconfig"; sourceTree = "<group>"; };
+		B79954129C651994725C532C /* Pods-pass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pass/Pods-pass.debug.xcconfig"; sourceTree = "<group>"; };
+		C9E50F9C81415E984F06C146 /* Pods_pass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D2090D2130444F00232F61 /* pass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D209102130444F00232F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5D209122130444F00232F61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +61,16 @@
 		E5D2092C2130445000232F61 /* passUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = passUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D209302130445000232F61 /* passUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passUITests.swift; sourceTree = "<group>"; };
 		E5D209322130445000232F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5D2093F2130505C00232F61 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		E5D209432130509B00232F61 /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
+		E5D20945213050A300232F61 /* PassDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassDAO.swift; sourceTree = "<group>"; };
+		E5D20947213050AC00232F61 /* MarketDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDAO.swift; sourceTree = "<group>"; };
+		E5D2094B213050D500232F61 /* AWSUserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSUserDAO.swift; sourceTree = "<group>"; };
+		E5D2094D213050DD00232F61 /* AWSPassDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSPassDAO.swift; sourceTree = "<group>"; };
+		E5D2094F213050E900232F61 /* AWSMarketDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSMarketDAO.swift; sourceTree = "<group>"; };
+		E5D2095E2130559B00232F61 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E5D20960213055A200232F61 /* Pass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pass.swift; sourceTree = "<group>"; };
+		E5D20962213055AA00232F61 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF15CBA50EC5F70DF45A6CC4 /* Pods_pass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +99,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74BF714A850D2C257ED9C1CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9E50F9C81415E984F06C146 /* Pods_pass.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B66E5E1DA4D76084293A4390 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B79954129C651994725C532C /* Pods-pass.debug.xcconfig */,
+				017667527B51668F6FB5A8CB /* Pods-pass.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E5D209042130444F00232F61 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +123,8 @@
 				E5D209242130445000232F61 /* passTests */,
 				E5D2092F2130445000232F61 /* passUITests */,
 				E5D2090E2130444F00232F61 /* Products */,
+				B66E5E1DA4D76084293A4390 /* Pods */,
+				74BF714A850D2C257ED9C1CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +141,7 @@
 		E5D2090F2130444F00232F61 /* pass */ = {
 			isa = PBXGroup;
 			children = (
+				E5D2093E2130504900232F61 /* Network */,
 				E5D209102130444F00232F61 /* AppDelegate.swift */,
 				E5D209122130444F00232F61 /* ViewController.swift */,
 				E5D209142130444F00232F61 /* Main.storyboard */,
@@ -125,6 +170,55 @@
 			path = passUITests;
 			sourceTree = "<group>";
 		};
+		E5D2093E2130504900232F61 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E5D209412130507A00232F61 /* DAO */,
+				E5D2093F2130505C00232F61 /* API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E5D209412130507A00232F61 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				E5D2095D2130558500232F61 /* Model */,
+				E5D2094A213050B700232F61 /* AWSImp */,
+				E5D209422130508300232F61 /* Protocol */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		E5D209422130508300232F61 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E5D209432130509B00232F61 /* UserDAO.swift */,
+				E5D20945213050A300232F61 /* PassDAO.swift */,
+				E5D20947213050AC00232F61 /* MarketDAO.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E5D2094A213050B700232F61 /* AWSImp */ = {
+			isa = PBXGroup;
+			children = (
+				E5D2094B213050D500232F61 /* AWSUserDAO.swift */,
+				E5D2094D213050DD00232F61 /* AWSPassDAO.swift */,
+				E5D2094F213050E900232F61 /* AWSMarketDAO.swift */,
+			);
+			path = AWSImp;
+			sourceTree = "<group>";
+		};
+		E5D2095D2130558500232F61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5D2095E2130559B00232F61 /* User.swift */,
+				E5D20960213055A200232F61 /* Pass.swift */,
+				E5D20962213055AA00232F61 /* Market.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5D209352130445000232F61 /* Build configuration list for PBXNativeTarget "pass" */;
 			buildPhases = (
+				5B2A3E5935D0299559405754 /* [CP] Check Pods Manifest.lock */,
 				E5D209092130444F00232F61 /* Sources */,
 				E5D2090A2130444F00232F61 /* Frameworks */,
 				E5D2090B2130444F00232F61 /* Resources */,
+				F66EB4546F33C6775CE264E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,13 +347,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5B2A3E5935D0299559405754 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F66EB4546F33C6775CE264E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-pass/Pods-pass-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pass/Pods-pass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E5D209092130444F00232F61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E5D209132130444F00232F61 /* ViewController.swift in Sources */,
+				E5D2094E213050DD00232F61 /* AWSPassDAO.swift in Sources */,
+				E5D20950213050E900232F61 /* AWSMarketDAO.swift in Sources */,
+				E5D209402130505C00232F61 /* API.swift in Sources */,
+				E5D2094C213050D500232F61 /* AWSUserDAO.swift in Sources */,
+				E5D20948213050AC00232F61 /* MarketDAO.swift in Sources */,
 				E5D209112130444F00232F61 /* AppDelegate.swift in Sources */,
+				E5D20946213050A300232F61 /* PassDAO.swift in Sources */,
+				E5D20961213055A200232F61 /* Pass.swift in Sources */,
+				E5D2095F2130559B00232F61 /* User.swift in Sources */,
+				E5D209442130509B00232F61 /* UserDAO.swift in Sources */,
+				E5D20963213055AA00232F61 /* Market.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +573,7 @@
 		};
 		E5D209362130445000232F61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B79954129C651994725C532C /* Pods-pass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +592,7 @@
 		};
 		E5D209372130445000232F61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 017667527B51668F6FB5A8CB /* Pods-pass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
