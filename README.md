@@ -1,14 +1,14 @@
 # Pass
 ## To do list ##
 1. Interface (API) 정의
-  * User
+  * ## User ##
     - ### Post: 유저 회원가입 ###
      * request: {email:String, password:String, group:"user" | "manager" | "admin"}, 
      * response: {success:Boolean}
     - ### Get: 유저 로그인 ###
      + request: {email:String, password:String}
      + response: {success:Boolean}
-  * Market
+  * ## Market ##
     - ### Post: 사업장생성 ###
      + request: {userId:String, name:String, bankname:String, accountNumber:String, lat:Double, lng:Double}
      + response: {success:Boolean}
@@ -18,7 +18,7 @@
     - ### Patch: 가까운 사업장 리스트 가져오기 (market id list) ###
      + request: {lat:Double, lng:Double}
      + response: {items: [String, ...]
-  * Pass
+  * ## Pass ##
     - ### Post: 결제 이벤트 발생 ###
      + request: {userId:String, marketId:String, money:Int, tableName:String}
      + response: {success:Boolean}
