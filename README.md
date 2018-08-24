@@ -1,7 +1,7 @@
 # Pass
 ## To do list ##
 1. Interface (API) 정의
-  * Path *
+  * Path 
   1. User
     1. Post: 유저 회원가입
     request: {email:String, password:String, group:"user" | "manager" | "admin"}, 
