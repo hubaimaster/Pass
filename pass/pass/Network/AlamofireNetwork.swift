@@ -27,7 +27,23 @@ class AlamofireNetwork: Network {
     }
     
     func get(url: String, params: [String: Any], callback: @escaping (String?)->Void){
-        request(url: url, method: .get, params: params, callback: callback)
+        //request(url: url, method: .get, params: params, callback: callback)
+        let params = appendSessionId(params: params)
+        var url = url + "?"
+        for (idx, param) in params.enumerated(){
+            url += param.key + "=\(param.value)"
+            if idx != params.count - 1{
+                url += "&"
+            }
+        }
+        print("url:\(url)")
+        Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil).response { (response) in
+            if let data = response.data, let string = String(data: data, encoding: String.Encoding.utf8){
+                callback(string)
+            }else{
+                callback(nil)
+            }
+        }
     }
     
     func post(url: String, params: [String: Any], callback: @escaping (String?)->Void){

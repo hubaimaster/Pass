@@ -49,7 +49,9 @@ class DetailMarketViewController: UITableViewController {
                 for pass in passes{
                     let data = PassCellModel(pass: pass)
                     self.money += data.money
-                    self.insert(data: data)
+                    if pass.status == 0{
+                        self.insert(data: data)
+                    }
                     if let label = self.moneyLabel{
                         label.text = "\(self.money) 원"
                     }
@@ -128,6 +130,18 @@ class DetailMarketViewController: UITableViewController {
         view.addSubview(headerLabel)
         view.addSubview(moneyLabel)
         return view
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let data = datas[indexPath.item] as? PassCellModel{
+            if let passId = data.pass.id{
+                API.model.pass.put(passId: passId) { (_) in
+                    self.removeAll(completion: { (_) in
+                        self.prepare()
+                    })
+                }
+            }
+        }
     }
     
 }

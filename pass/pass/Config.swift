@@ -32,6 +32,7 @@ struct Config {
         static let DetailMarketViewController = "DetailMarketViewController"
         static let UserViewController = "UserViewController"
         static let PassViewController = "PassViewController"
+        static let WatingViewController = "WatingViewController"
     }
     
     struct cell {
