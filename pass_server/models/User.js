@@ -2,14 +2,12 @@
 
 var mongoose = require('mongoose')
 var uuid = require('node-uuid')
+var bcrypt = require('bcrypt-nodejs')
 
 var userSchema = mongoose.Schema({
   _id:{
     type:String,
     default:uuid.v4
-  },
-  name:{
-    type:String
   },
   password:{
     type:String,
@@ -17,7 +15,8 @@ var userSchema = mongoose.Schema({
   },
   email:{
     type:String,
-    require:true
+    require:true,
+    unique:true
   },
   group:{
     type:String
@@ -36,18 +35,35 @@ var userSchema = mongoose.Schema({
 userSchema.statics.createUser = function(payload){
   console.log("created new user")
 
-  var pass = new this(payload)
+  var user = new this(payload)
 
-  return pass.save()
+  return user.save()
 }
 
 // find one pass
-userSchema.statics.findOneById = function(id){
-  console.log("Searching a pass",id)
+userSchema.statics.findOneByEmail = function(email){
+  console.log("Searching an user",email)
 
-  return this.findOne({id})
+  return this.findOne({email})
 }
 
+// authentication
+userSchema.methods.authenticate = function(password){
+	console.log('Authenticating a password')
+
+	var user = this
+	return bcrypt.compareSync(password,user.password)
+}
+
+userSchema.pre('save',function(next){
+	var user = this
+	if(!user.isModified('password')){
+		next()
+	} else {
+		user.password = bcrypt.hashSync(user.password)
+		next()
+	}
+})
 
 var User = mongoose.model("user",userSchema)
 

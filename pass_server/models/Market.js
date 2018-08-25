@@ -42,10 +42,10 @@ marketSchema.statics.createMarket = function(payload){
 }
 
 // find one pass
-marketSchema.statics.findOneById = function(id){
-  console.log("Searching a market",id)
+marketSchema.statics.findOneById = function(marketId){
+  console.log("Searching a market",marketId)
 
-  return this.findOne({id})
+  return this.findOne({id:marketId})
 }
 
 

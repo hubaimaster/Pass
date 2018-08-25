@@ -23,20 +23,33 @@ exports.register = (req,res) => {
 
 
 }
-// GET
+// POST
 // user login
 exports.login = (req,res) => {
-  var pqyload = req.param
+  var email = req.body.email
+  var password = req.body.password
+
+  var authenticate = (user) => {
+    if(!user){//User doesn't exist
+      throw new Error('Login Failed')
+    } else {
+      return new Promise((resolve) => {
+        if(user.authenticate(password)) resolve(user)
+        else throw new Error('Invalid Password')
+      })
+    }
+  }
 
   var onSuccess = (user) => {
-      console.log(pass)
+      console.log(user)
       res.status(200).json(util.successTrue(user))
   }
   var onError = (error) => {
       console.error(error)
       res.status(400).json(util.successFalse(error))
  }
- user.findOneById(payload)
+ user.findOneByEmail(email)
+ .then(authenticate)
  .then(onSuccess)
  .catch(onError)
 }
