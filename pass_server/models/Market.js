@@ -13,7 +13,7 @@ var marketSchema = mongoose.Schema({
   },
   desc:{
     type:String
-  }
+  },
   bankName:{
     type:String
   },
