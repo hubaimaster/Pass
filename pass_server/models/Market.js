@@ -17,11 +17,9 @@ var marketSchema = mongoose.Schema({
   accountNumber:{
     type:String
   },
-  lat:{
-    type:Number
-  },
-  lng:{
-    type:Number
+  location:{
+    type: {type:String},
+    coordinates: []
   },
   userId:{
     type:String
@@ -31,6 +29,9 @@ var marketSchema = mongoose.Schema({
     default:Date.now()
   }
 })
+
+marketSchema.index({location:"2dsphere"})
+
 // create a new pass
 marketSchema.statics.createPass = function(payload){
   console.log("created new pass")
