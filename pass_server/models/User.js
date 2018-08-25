@@ -6,7 +6,7 @@ var uuid = require('node-uuid')
 var userSchema = mongoose.Schema({
   _id:{
     type:String,
-    default:function genUUID(){uuid.v4()}
+    default:uuid.v4
   },
   name:{
     type:String

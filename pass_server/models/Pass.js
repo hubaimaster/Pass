@@ -6,8 +6,6 @@ var uuid = require('node-uuid')
 var passSchema = mongoose.Schema({
   _id:{
     type:String,
-    unique:true,
-    index:true,
     default:uuid.v4
   },
   userId:{
@@ -41,7 +39,20 @@ passSchema.statics.createPass = function(payload){
 passSchema.statics.findOneById = function(id){
   console.log("Searching a pass",id)
 
-  return this.findOne({id})
+  return this.findOne({id:id})
+}
+
+// find pass id list by marketId
+passSchema.statics.findListByMarketId = function(marketId){
+  console.log("Seraching a list",marketId)
+
+  return this.find({marketId}).sort({creationDate:'desc'}).select("id")
+}
+
+passSchema.statics.deleteOneById = function(id){
+  console.log("Deleting a pass",id)
+
+  return this.deleteOne({id:id})
 }
 
 var Pass = mongoose.model("pass",passSchema)
