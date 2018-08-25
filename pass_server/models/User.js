@@ -33,8 +33,8 @@ var userSchema = mongoose.Schema({
 })
 
 // create a new pass
-userSchema.statics.createPass = function(payload){
-  console.log("created new pass")
+userSchema.statics.createUser = function(payload){
+  console.log("created new user")
 
   var pass = new this(payload)
 
