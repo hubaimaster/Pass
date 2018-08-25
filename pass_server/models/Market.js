@@ -29,7 +29,7 @@ var marketSchema = mongoose.Schema({
   },
   creationDate:{
     type:Number,
-    default:Date.now()
+    default:new Date().getTime()
   }
 })
 

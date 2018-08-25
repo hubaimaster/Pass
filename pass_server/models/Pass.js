@@ -26,7 +26,7 @@ var passSchema = mongoose.Schema({
   },
   creationDate:{
     type:Number,
-    default:Date.now()
+    default:new Date().getTime()
   }
 })
 
