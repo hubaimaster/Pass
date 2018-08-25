@@ -18,9 +18,19 @@ class ChargeInfoViewController: UIViewController {
     @IBOutlet weak var bankField: UITextField!
     @IBOutlet weak var moneyField: UITextField!
     var totalAmount : Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentMoneyTextField.text = ""
+        
+        bankField.borderStyle = .none
+        moneyField.borderStyle = .none
+       
+        updateCurrentMoney()
+        
+    }
+    func updateCurrentMoney()
+    {
+        
         API.model.user.me { (user) in
             if let totalMoney = user?.money
             {
@@ -30,10 +40,8 @@ class ChargeInfoViewController: UIViewController {
             self.currentMoneyTextField.text = " \(self.totalAmount)원"
         };
         
-        bankField.borderStyle = .none
-        moneyField.borderStyle = .none
+        
     }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
       
@@ -50,8 +58,20 @@ class ChargeInfoViewController: UIViewController {
         API.model.user.me { (me) in
             let myId = me?.id
             API.model.user.charge(email: myId!, amount: amountOfMoney)
+            self.tryAutoLogin()
+            self.updateCurrentMoney()
             
         };
         }
     
+    func tryAutoLogin(){
+        print("tryAutoLogin!")
+        if let email = UserDefaults.standard.string(forKey: "email"), let password = UserDefaults.standard.string(forKey: "password"){
+            API.model.user.signIn(email: email, password: password) { (me) in
+                if let group = me?.group{
+                    
+                }
+            }
+        }
+    }
 }

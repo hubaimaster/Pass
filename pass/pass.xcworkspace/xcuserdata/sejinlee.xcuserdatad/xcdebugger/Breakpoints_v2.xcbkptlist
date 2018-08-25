@@ -19,53 +19,5 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pass/VC/UserPage/ChargeInfoViewController.swift"
-            timestampString = "556905149.113138"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "pass.ChargeInfoViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "pass"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sejinlee/Desktop/passApp/Pass/pass/pass/VC/UserPage/ChargeInfoViewController.swift"
-                  timestampString = "556902229.671827"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "431">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;pass.User&gt;) -&gt; () in pass.ChargeInfoViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "pass"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sejinlee/Desktop/passApp/Pass/pass/pass/VC/UserPage/ChargeInfoViewController.swift"
-                  timestampString = "556902229.675288"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "22">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
