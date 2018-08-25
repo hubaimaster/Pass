@@ -61,6 +61,7 @@ class ChargeInfoViewController: UIViewController {
             self.tryAutoLogin()
             self.updateCurrentMoney()
             
+            JDStatusBarNotification.show(withStatus: "충전 성공", dismissAfter: 3)
         };
         performSegue(withIdentifier: "chargeSuccess", sender: self)
         }
