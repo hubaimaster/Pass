@@ -31,6 +31,22 @@ var marketSchema = mongoose.Schema({
     default:Date.now()
   }
 })
+// create a new pass
+marketSchema.statics.createPass = function(payload){
+  console.log("created new pass")
+
+  var pass = new this(payload)
+
+  return pass.save()
+}
+
+// find one pass
+marketSchema.statics.findOneById = function(id){
+  console.log("Searching a pass",id)
+
+  return this.findOne({id})
+}
+
 
 var Market = mongoose.model("market",marketSchema)
 
