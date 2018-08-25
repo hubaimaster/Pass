@@ -880,7 +880,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="34" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rbl-gI-CrS">
-                                <rect key="frame" x="16" y="105" width="343" height="45"/>
+                                <rect key="frame" x="16" y="61" width="343" height="45"/>
                                 <color key="tintColor" red="0.4039215686" green="0.65490196079999996" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="RZd-iF-26n"/>
@@ -891,7 +891,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="테이블 번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLY-mW-GmN">
-                                <rect key="frame" x="16" y="80" width="343" height="17"/>
+                                <rect key="frame" x="16" y="36" width="343" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="9dw-ny-VBV"/>
                                 </constraints>
@@ -900,7 +900,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지불 금액 (원)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4T-QO-bht">
-                                <rect key="frame" x="16" y="158" width="343" height="17"/>
+                                <rect key="frame" x="16" y="114" width="343" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="v4p-PN-Hsi"/>
                                 </constraints>
@@ -923,7 +923,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="8000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lLQ-ei-Bw5">
-                                <rect key="frame" x="16" y="183" width="343" height="35"/>
+                                <rect key="frame" x="16" y="139" width="343" height="35"/>
                                 <color key="tintColor" red="0.4039215686" green="0.65490196079999996" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="BRh-qV-ty9"/>
@@ -1015,27 +1015,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="123-456-789" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kpM-Uy-vab">
-                                <rect key="frame" x="16" y="288" width="343" height="30"/>
+                                <rect key="frame" x="16" y="244" width="343" height="30"/>
                                 <color key="tintColor" red="0.4039215686" green="0.65490196079999996" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계좌 번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTm-pL-dIc">
-                                <rect key="frame" x="16" y="264" width="343" height="17"/>
+                                <rect key="frame" x="16" y="220" width="343" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="8000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7K-QK-BsQ">
-                                <rect key="frame" x="16" y="350" width="343" height="30"/>
+                                <rect key="frame" x="16" y="306" width="343" height="30"/>
                                 <color key="tintColor" red="0.4039215686" green="0.65490196079999996" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="충전 금액 (원)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5V-no-ayd">
-                                <rect key="frame" x="16" y="326" width="343" height="17"/>
+                                <rect key="frame" x="16" y="282" width="343" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1055,7 +1055,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5y2-jj-uLT">
-                                <rect key="frame" x="10" y="133" width="343" height="41"/>
+                                <rect key="frame" x="10" y="89" width="343" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="3Ic-UU-hRM"/>
                                 </constraints>
@@ -1092,14 +1092,18 @@
                         <outlet property="bankField" destination="kpM-Uy-vab" id="Xjw-lh-cX3"/>
                         <outlet property="currentMoneyTextField" destination="5y2-jj-uLT" id="yk4-eu-POr"/>
                         <outlet property="moneyField" destination="a7K-QK-BsQ" id="8XV-Uo-3CK"/>
+                        <segue destination="mcb-KF-02d" kind="push" identifier="chargeSuccess" id="jH4-iw-LeA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PII-2W-a9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3649" y="1481"/>
+            <point key="canvasLocation" x="3329" y="1632"/>
         </scene>
     </scenes>
     <resources>
         <image name="app-icon" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="jH4-iw-LeA"/>
+    </inferredMetricsTieBreakers>
 </document>

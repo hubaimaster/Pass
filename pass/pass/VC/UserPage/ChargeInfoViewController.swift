@@ -62,6 +62,7 @@ class ChargeInfoViewController: UIViewController {
             self.updateCurrentMoney()
             
         };
+        performSegue(withIdentifier: "chargeSuccess", sender: self)
         }
     
     func tryAutoLogin(){
