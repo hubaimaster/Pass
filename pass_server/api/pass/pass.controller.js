@@ -1,12 +1,32 @@
 // api/pass/pass.controller.js
 
 var Pass = require('../../models/Pass')
+var User = require('../../models/User')
 var util = require('../../utils/util')
 
 // POST
 // create new pass.
 exports.newPass = (req,res) => {
   var payload = req.body
+  var userId = payload.userId
+  var moneyAmount = payload.money
+
+  var validate = (user) => {
+    console.log("validation")
+    if(!user) throw new Error("Failed")
+    else if(user.money - moneyAmount < 0){
+      console.log("Not Enough Money")
+      throw new Error("Not Enough Money")
+    }
+    else{
+      console.log("Spend Money")
+      return User.findOneAndUpdate({_id:user._id},{$inc:{money:-moneyAmount}},{new:true})
+    }
+  }
+
+  var makeAPass = (user) => {
+    return Pass.createPass(payload)
+  }
 
   var onSuccess = (pass) => {
     console.log(pass)
@@ -18,7 +38,9 @@ exports.newPass = (req,res) => {
     res.status(400).json(util.successFalse(error))
   }
 
-  Pass.createPass(payload)
+  User.findOneById(userId)
+  .then(validate)
+  .then(makeAPass)
   .then(onSuccess)
   .catch(onError)
 }

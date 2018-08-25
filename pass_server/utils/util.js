@@ -12,7 +12,7 @@ util.successTrue = (data) => {
 }
 
 util.successFalse = (error,message) => {
-  if(!err && !meesage) message = 'data not found';
+  if(!error && !meesage) message = 'data not found';
   return {
     success:false,
     message:message,

@@ -40,6 +40,12 @@ userSchema.statics.createUser = function(payload){
   return user.save()
 }
 
+userSchema.statics.findOneById = function(id){
+  console.log("Searching an user",id)
+
+  return this.findOne({_id:id})
+}
+
 // find one pass
 userSchema.statics.findOneByEmail = function(email){
   console.log("Searching an user",email)
@@ -47,7 +53,7 @@ userSchema.statics.findOneByEmail = function(email){
   return this.findOne({email})
 }
 
-userSchema.methods.reloadMoney = function(userId,amount){
+userSchema.statics.reloadMoney = function(userId,amount){
   console.log("Reload money",userId,amount)
 
   return this.findOneAndUpdate({_id:userId},{$inc:{money:amount}},{new:true})
