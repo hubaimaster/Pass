@@ -48,14 +48,10 @@ exports.getPass = (req,res) => {
 exports.getPassList = (req,res) => {
   var marketId = req.body.marketId
 
-  var onSuccess = (passIds) => {
-    var passList = []
-
-    for(i=0;i<passIds.length;i++){
-      passList.push(passIds[i]._id)
-    }
-    console.log(passList)
-    res.status(200).json(util.successTrue(passList))
+  var onSuccess = (passes) => {
+    passes.forEach(util.listPacking)
+    console.log(passes)
+    res.status(200).json(util.successTrue(passes))
   }
 
   var onError = (error) => {

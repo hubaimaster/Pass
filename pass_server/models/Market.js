@@ -29,7 +29,7 @@ var marketSchema = mongoose.Schema({
   },
   creationDate:{
     type:Number,
-    default:Date.now()
+    default:new Date().getTime()
   }
 })
 
@@ -38,6 +38,13 @@ marketSchema.index({location:"2dsphere"})
 // create a new pass
 marketSchema.statics.createMarket = function(payload){
   console.log("created new market")
+
+  var lat = Number(payload.lat)
+  var lng = Number(payload.lng)
+
+  delete payload.lat
+  delete payload.lng
+  payload.location = {type:"Point", coordinates:[lng,lat]}
 
   var market = new this(payload)
 
@@ -60,7 +67,7 @@ marketSchema.statics.findUsersMarket = function(userId){
 marketSchema.statics.findNearMarket = function(lat,lng){
   console.log("Searching near marketlist",lat,lng)
 
-  var geospartial = {type:"Point",coordinates:[lng,lat]}
+  var geospartial = {type:"Point", coordinates:[lng,lat]}
 
   return this.find({location: {
                       $near: {
