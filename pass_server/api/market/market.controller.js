@@ -44,14 +44,16 @@ exports.marketInfo = (req,res) => {
   .catch(onError)
 }
 
+
 // PATCH
 // find near markets' list by location
 exports.nearMarketList = (req,res) => {
   var {lat,lng} = req.body
 
   var onSuccess = (marketList) => {
+    marketList.forEach(packing,this)
     console.log(marketList)
-    res.status(200).json(util.successTrue(market))
+    res.status(200).json(util.successTrue(marketList))
   }
 
   var onError = (error) => {
@@ -67,11 +69,12 @@ exports.nearMarketList = (req,res) => {
 // PATCH
 // find users' markets' list
 exports.usersMarketList = (req,res) => {
-  var userId = req.param.userId
+  var userId = req.body.userId
 
   var onSuccess = (marketList) => {
+    marketList.forEach(packing,this)
     console.log(marketList)
-    res.status(200).json(util.successTrue(market))
+    res.status(200).json(util.successTrue(marketList))
   }
 
   var onError = (error) => {
@@ -82,4 +85,9 @@ exports.usersMarketList = (req,res) => {
   market.findUsersMarket(userId)
   .then(onSuccess)
   .catch(onError)
+}
+
+var packing = (item,index,arr) => {
+  arr[index] = {"data":item}
+
 }

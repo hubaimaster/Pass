@@ -39,6 +39,13 @@ marketSchema.index({location:"2dsphere"})
 marketSchema.statics.createMarket = function(payload){
   console.log("created new market")
 
+  var lat = payload.lat
+  var lng = payload.lng
+
+  delete payload.lat
+  delete payload.lng
+  payload.location = {type:"Point", coordinates:[lng,lat]}
+
   var market = new this(payload)
 
   return market.save()
@@ -60,7 +67,7 @@ marketSchema.statics.findUsersMarket = function(userId){
 marketSchema.statics.findNearMarket = function(lat,lng){
   console.log("Searching near marketlist",lat,lng)
 
-  var geospartial = {type:"Point",coordinates:[lng,lat]}
+  var geospartial = {type:"Point", coordinates:[lng,lat]}
 
   return this.find({location: {
                       $near: {
