@@ -11,6 +11,9 @@ var marketSchema = mongoose.Schema({
   name:{
     type:String
   },
+  desc:{
+    type:String
+  }
   bankName:{
     type:String
   },
