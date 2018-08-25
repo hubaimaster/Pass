@@ -39,8 +39,8 @@ marketSchema.index({location:"2dsphere"})
 marketSchema.statics.createMarket = function(payload){
   console.log("created new market")
 
-  var lat = payload.lat
-  var lng = payload.lng
+  var lat = Number(payload.lat)
+  var lng = Number(payload.lng)
 
   delete payload.lat
   delete payload.lng
