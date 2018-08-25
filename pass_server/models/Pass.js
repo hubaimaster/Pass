@@ -20,6 +20,10 @@ var passSchema = mongoose.Schema({
     type:Number,
     require:true
   },
+  tableName:{
+    type:String,
+    require:true
+  },
   creationDate:{
     type:Number,
     default:Date.now()
