@@ -27,7 +27,7 @@ class ChargeInfoViewController: UIViewController {
                 self.totalAmount = totalMoney
                 
             }
-            self.currentMoneyTextField.text = " \(self.totalAmount)원" 
+            self.currentMoneyTextField.text = " \(self.totalAmount)원"
         };
         
         bankField.borderStyle = .none
@@ -40,6 +40,9 @@ class ChargeInfoViewController: UIViewController {
     }
     
     @IBAction func Charge(_ sender: Any) {
-      
+        guard let BankNumber = bankField.text let Money = moneyField else {
+            JDStatusBarNotification.show(withStatus: "모든 정보를 입력해주세요", dismissAfter: 3)
+            return
+        }
     }
 }
