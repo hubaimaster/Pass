@@ -17,6 +17,7 @@ class Pass {
     var marketId: String!
     var money: Int!
     var tableName: String!
+    var status: Int!
     
     init(json: JSON) {
         print("json:\(json)")
@@ -27,6 +28,7 @@ class Pass {
         self.marketId = json["mareketId"].string
         self.money = json["money"].int
         self.tableName = json["tableName"].string
+        self.status = json["status"].int
     }
     
 }

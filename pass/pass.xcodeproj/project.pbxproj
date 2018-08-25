@@ -43,6 +43,7 @@
 		E5D2098A21314ABA00232F61 /* PassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2098921314ABA00232F61 /* PassCell.swift */; };
 		E5D2098C2131507900232F61 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2098B2131507900232F61 /* Format.swift */; };
 		E5D2098E2131688100232F61 /* PassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2098D2131688100232F61 /* PassViewController.swift */; };
+		E5D20990213194E600232F61 /* WatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2098F213194E600232F61 /* WatingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		E5D2098921314ABA00232F61 /* PassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCell.swift; sourceTree = "<group>"; };
 		E5D2098B2131507900232F61 /* Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
 		E5D2098D2131688100232F61 /* PassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassViewController.swift; sourceTree = "<group>"; };
+		E5D2098F213194E600232F61 /* WatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +327,7 @@
 			children = (
 				E5D2098721314AB100232F61 /* PassCellModel.swift */,
 				E5D2098921314ABA00232F61 /* PassCell.swift */,
+				E5D2098F213194E600232F61 /* WatingViewController.swift */,
 			);
 			path = Pass;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				E5D20967213063EF00232F61 /* Network.swift in Sources */,
 				E5D2098E2131688100232F61 /* PassViewController.swift in Sources */,
 				E5D209132130444F00232F61 /* EntryViewController.swift in Sources */,
+				E5D20990213194E600232F61 /* WatingViewController.swift in Sources */,
 				E5D2094E213050DD00232F61 /* AWSPassDAO.swift in Sources */,
 				E5D2096A2130648900232F61 /* Config.swift in Sources */,
 				E5D2097721311FFD00232F61 /* UserViewController.swift in Sources */,
