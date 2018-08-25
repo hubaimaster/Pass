@@ -21,4 +21,8 @@ util.successFalse = (error,message) => {
   }
 }
 
+util.listPacking = (item,index,arr) => {
+  arr[index] = {"data":item}
+}
+
 module.exports = util

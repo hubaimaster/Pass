@@ -50,7 +50,7 @@ passSchema.statics.findOneById = function(id){
 passSchema.statics.findListByMarketId = function(marketId){
   console.log("Seraching a list",marketId)
 
-  return this.find({marketId}).sort({creationDate:'desc'}).select("id")
+  return this.find({marketId}).sort({creationDate:'desc'})
 }
 
 passSchema.statics.deleteOneById = function(id){

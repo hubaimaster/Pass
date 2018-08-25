@@ -51,7 +51,7 @@ exports.nearMarketList = (req,res) => {
   var {lat,lng} = req.body
 
   var onSuccess = (marketList) => {
-    marketList.forEach(packing,this)
+    marketList.forEach(util.listPacking)
     console.log(marketList)
     res.status(200).json(util.successTrue(marketList))
   }
@@ -72,7 +72,7 @@ exports.usersMarketList = (req,res) => {
   var userId = req.body.userId
 
   var onSuccess = (marketList) => {
-    marketList.forEach(packing,this)
+    marketList.forEach(util.listPacking)
     console.log(marketList)
     res.status(200).json(util.successTrue(marketList))
   }
@@ -85,9 +85,4 @@ exports.usersMarketList = (req,res) => {
   market.findUsersMarket(userId)
   .then(onSuccess)
   .catch(onError)
-}
-
-var packing = (item,index,arr) => {
-  arr[index] = {"data":item}
-
 }
