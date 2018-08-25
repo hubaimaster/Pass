@@ -42,17 +42,16 @@ class PassViewController: UIViewController {
     @IBAction func confirm(_ sender: Any) {
         API.model.user.me { (me) in
             if let myId = me?.id, let marketId = self.market.id, let money = self.moneyField.text, let _money = Int(money), let tableName = self.nameField.text{
-                API.model.pass.create(userId: myId, marketId: marketId, money: _money, tableName: tableName, callback: { (success) in
-                    if success{
-                        JDStatusBarNotification.show(withStatus: "지불 성공!", dismissAfter: 5)
-                        self.navigationController?.popViewController(animated: true)
+                API.model.pass.create(userId: myId, marketId: marketId, money: _money, tableName: tableName, callback: { (pass) in
+                    if let pass = pass{
+                        let vc = WatingViewController.getInstance(pass: pass)
+                        self.present(vc, animated: true, completion: nil)
                     }else{
                         JDStatusBarNotification.show(withStatus: "지불 실패!", dismissAfter: 5)
                     }
                 })
             }
         }
-        self.navigationController?.popViewController(animated: true)
     }
     
     func prepare(){

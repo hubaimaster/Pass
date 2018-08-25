@@ -7,5 +7,6 @@ router.post('/',controller.newPass)
 router.get('/',controller.getPass)
 router.patch('/',controller.getPassList)
 router.delete('/',controller.delPass)
+router.put('/',controller.pass)
 
 module.exports = router

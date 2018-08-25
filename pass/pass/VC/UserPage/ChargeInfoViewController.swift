@@ -40,9 +40,18 @@ class ChargeInfoViewController: UIViewController {
     }
     
     @IBAction func Charge(_ sender: Any) {
-        guard let BankNumber = bankField.text let Money = moneyField else {
+       
+        guard let BankNumber = bankField.text, let Money = moneyField.text else {
             JDStatusBarNotification.show(withStatus: "모든 정보를 입력해주세요", dismissAfter: 3)
             return
         }
-    }
+        let amountOfMoney: Int! = Int(moneyField.text!)
+        
+        API.model.user.me { (me) in
+            let myId = me?.id
+            API.model.user.charge(email: myId!, amount: amountOfMoney)
+            
+        };
+        }
+    
 }

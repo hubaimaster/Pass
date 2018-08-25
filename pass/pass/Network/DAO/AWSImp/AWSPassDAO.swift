@@ -11,13 +11,14 @@ import Foundation
 class AWSPassDAO: PassDAO {
     let baseUrl = "http://ec2-13-125-93-119.ap-northeast-2.compute.amazonaws.com:3000/pass"
     
-    func create(userId: String, marketId: String, money: Int, tableName: String, callback: @escaping (Bool) -> Void) {
+    func create(userId: String, marketId: String, money: Int, tableName: String, callback: @escaping (Pass?) -> Void) {
         let params: [String: Any] = ["userId": userId, "marketId": marketId, "money": money, "tableName": tableName]
         API.http.post(url: baseUrl, params: params) { (data) in
-            if let json = JsonUtil.stringToJson(string: data), let success = json["success"].bool, success{
-                callback(true)
+            if let json = JsonUtil.stringToJson(string: data){
+                let pass = Pass(json: json)
+                callback(pass)
             }else{
-                callback(false)
+                callback(nil)
             }
         }
     }
@@ -48,6 +49,17 @@ class AWSPassDAO: PassDAO {
     }
     
     func delete(passId: String, callback: @escaping (Bool) -> Void) {
+        let params: [String: Any] = ["passId": passId]
+        API.http.delete(url: baseUrl, params: params) { (data) in
+            if let json = JsonUtil.stringToJson(string: data), let success = json["success"].bool, success{
+                callback(true)
+            }else{
+                callback(false)
+            }
+        }
+    }
+    
+    func put(passId: String, callback: @escaping (Bool) -> Void) {
         let params: [String: Any] = ["passId": passId]
         API.http.delete(url: baseUrl, params: params) { (data) in
             if let json = JsonUtil.stringToJson(string: data), let success = json["success"].bool, success{

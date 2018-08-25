@@ -421,3 +421,13 @@
     }  
     ```
 ### User
+  * 돈 충전
+    * route: /user
+    * method: PUT
+    * request: JSON
+    Request Example
+    ```json
+    {
+      "userId":"8df38cd5-43b7-46e6-b932-2b5b035b982c",
+      "money":10000
+    }
