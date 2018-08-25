@@ -27,7 +27,7 @@ exports.register = (req,res) => {
 // GET
 // find a market by id
 exports.marketInfo = (req,res) => {
-  var marketId = req.param.marketId
+  var marketId = req.query.marketId
 
   var onSuccess = (market) => {
     console.log(market)

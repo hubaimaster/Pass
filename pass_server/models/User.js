@@ -47,6 +47,12 @@ userSchema.statics.findOneByEmail = function(email){
   return this.findOne({email})
 }
 
+userSchema.methods.reloadMoney = function(userId,amount){
+  console.log("Reload money",userId,amount)
+
+  return this.findOneAndUpdate({_id:userId},{$inc:{money:amount}},{new:true})
+}
+
 // authentication
 userSchema.methods.authenticate = function(password){
 	console.log('Authenticating a password')

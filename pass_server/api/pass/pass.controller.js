@@ -26,7 +26,7 @@ exports.newPass = (req,res) => {
 // GET
 // get a pass object.
 exports.getPass = (req,res) => {
-  var id = req.param.passId
+  var id = req.query.passId
 
   var onSuccess = (pass) => {
     console.log(pass)
@@ -80,6 +80,26 @@ exports.delPass = (req,res) => {
   }
 
   Pass.deleteOneById(id)
+  .then(onSuccess)
+  .catch(onError)
+}
+
+// PUT
+// pass
+exports.pass = (req,res) => {
+  var passId = req.body.passId
+
+  var onSuccess = (pass) => {
+    console.log(pass)
+    res.status(200).json(util.successTrue(pass))
+  }
+
+  var onError = (error) => {
+    console.error(onError)
+    res.status(400).json(util.successFalse(error))
+  }
+
+  Pass.pass(passId)
   .then(onSuccess)
   .catch(onError)
 }

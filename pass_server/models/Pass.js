@@ -24,6 +24,11 @@ var passSchema = mongoose.Schema({
     type:String,
     require:true
   },
+  status:{
+    type:Number,
+    default:0,
+    require:true
+  },
   creationDate:{
     type:Number,
     default:new Date().getTime()
@@ -43,7 +48,7 @@ passSchema.statics.createPass = function(payload){
 passSchema.statics.findOneById = function(id){
   console.log("Searching a pass",id)
 
-  return this.findOne({id:id})
+  return this.findOne({_id:id})
 }
 
 // find pass id list by marketId
@@ -56,7 +61,13 @@ passSchema.statics.findListByMarketId = function(marketId){
 passSchema.statics.deleteOneById = function(id){
   console.log("Deleting a pass",id)
 
-  return this.deleteOne({id:id})
+  return this.deleteOne({_id:id})
+}
+
+passSchema.statics.pass = function(passId){
+  console.log("Pass",passId)
+
+  return this.findOneAndUpdate({_id:passId},{status:1},{new:true})
 }
 
 var Pass = mongoose.model("pass",passSchema)
