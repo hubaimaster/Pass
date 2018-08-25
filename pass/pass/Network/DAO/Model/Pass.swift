@@ -16,13 +16,17 @@ class Pass {
     var userId: String!
     var marketId: String!
     var money: Int!
+    var tableName: String!
     
     init(json: JSON) {
-        self.id = json["id"].string
+        print("json:\(json)")
+        let json = json["data"]
+        self.id = json["_id"].string
         self.creationDate = json["creationDate"].int
         self.userId = json["userId"].string
         self.marketId = json["mareketId"].string
         self.money = json["money"].int
+        self.tableName = json["tableName"].string
     }
     
 }

@@ -14,6 +14,7 @@ class Market {
     var id: String!
     var creationDate: Int!
     var name: String!
+    var desc: String!
     var bankName: String!
     var accountNumber: String!
     var lat: Double!
@@ -21,9 +22,11 @@ class Market {
     var userId: String!
     
     init(json: JSON) {
-        self.id = json["id"].string
+        let json = json["data"]
+        self.id = json["_id"].string
         self.creationDate = json["creationDate"].int
         self.name = json["name"].string
+        self.desc = json["desc"].string
         self.bankName = json["bankName"].string
         self.accountNumber = json["accountNumber"].string
         self.lat = json["lat"].double

@@ -11,5 +11,4 @@ pod 'STPopup'
 pod 'UITextView+Placeholder'
 pod 'JDStatusBarNotification'
 pod 'UIScrollView-InfiniteScroll'
-
 end
