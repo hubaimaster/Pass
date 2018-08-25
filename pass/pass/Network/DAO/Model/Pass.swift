@@ -18,7 +18,8 @@ class Pass {
     var money: Int!
     
     init(json: JSON) {
-        self.id = json["id"].string
+        let json = json["data"]
+        self.id = json["_id"].string
         self.creationDate = json["creationDate"].int
         self.userId = json["userId"].string
         self.marketId = json["mareketId"].string
