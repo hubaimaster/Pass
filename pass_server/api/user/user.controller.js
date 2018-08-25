@@ -53,3 +53,23 @@ exports.login = (req,res) => {
  .then(onSuccess)
  .catch(onError)
 }
+
+// put
+// Reload money
+exports.reload = (req,res) => {
+  var userId = req.body.userId
+  var moneyAmount = req.body.money
+
+  var onSuccess = (user) => {
+      console.log(user)
+      res.status(200).json(util.successTrue(user))
+  }
+  var onError = (error) => {
+      console.error(error)
+      res.status(400).json(util.successFalse(error))
+  }
+
+  user.reloadMoney(userId,moneyAmount)
+  .then(onSuccess)
+  .catch(onError)
+}

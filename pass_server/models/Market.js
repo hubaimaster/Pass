@@ -55,7 +55,7 @@ marketSchema.statics.createMarket = function(payload){
 marketSchema.statics.findOneById = function(marketId){
   console.log("Searching a market",marketId)
 
-  return this.findOne({id:marketId})
+  return this.findOne({_id:marketId})
 }
 
 marketSchema.statics.findUsersMarket = function(userId){

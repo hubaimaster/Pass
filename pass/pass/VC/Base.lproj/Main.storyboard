@@ -857,6 +857,11 @@
                                 <action selector="logout:" destination="mcb-KF-02d" id="slT-Pq-fiU"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="A9a-lS-yLX">
+                            <connections>
+                                <segue destination="OgO-T0-zvm" kind="push" id="6Ym-Sk-HCc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="1SG-zi-KiV" kind="show" id="LHT-ys-fMn"/>
@@ -1000,6 +1005,97 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZY1-So-CY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5269.6000000000004" y="778.56071964017997"/>
+        <!--충전하기 Scene-->
+        <scene sceneID="I8m-NU-SfL">
+            <objects>
+                <viewController storyboardIdentifier="ChargeInfoViewController" title="충전하기 Scene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OgO-T0-zvm" customClass="ChargeInfoViewController" customModule="pass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8aP-7I-n4D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="123-456-789" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kpM-Uy-vab">
+                                <rect key="frame" x="16" y="288" width="343" height="30"/>
+                                <color key="tintColor" red="0.4039215686" green="0.65490196079999996" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계좌 번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTm-pL-dIc">
+                                <rect key="frame" x="16" y="264" width="343" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="8000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7K-QK-BsQ">
+                                <rect key="frame" x="16" y="350" width="343" height="30"/>
+                                <color key="tintColor" red="0.4039215686" green="0.65490196079999996" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="충전 금액 (원)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5V-no-ayd">
+                                <rect key="frame" x="16" y="326" width="343" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dth-Ws-KgH">
+                                <rect key="frame" x="0.0" y="621" width="375" height="46"/>
+                                <color key="backgroundColor" red="0.4039215686" green="0.65490196079999996" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="dYE-Uw-F4L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="충전하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Charge:" destination="OgO-T0-zvm" eventType="touchUpInside" id="WiG-g5-7Rs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5y2-jj-uLT">
+                                <rect key="frame" x="10" y="133" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="3Ic-UU-hRM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sTm-pL-dIc" firstAttribute="leading" secondItem="8aP-7I-n4D" secondAttribute="leadingMargin" id="0Vu-gG-0wZ"/>
+                            <constraint firstItem="sTm-pL-dIc" firstAttribute="trailing" secondItem="8aP-7I-n4D" secondAttribute="trailingMargin" id="1by-AR-lYb"/>
+                            <constraint firstItem="sTm-pL-dIc" firstAttribute="top" secondItem="NbD-oo-2XY" secondAttribute="top" constant="200" id="8XI-h2-F9Q"/>
+                            <constraint firstItem="sTm-pL-dIc" firstAttribute="leading" secondItem="kpM-Uy-vab" secondAttribute="leading" id="DK7-Ib-TnQ"/>
+                            <constraint firstItem="s5V-no-ayd" firstAttribute="leading" secondItem="a7K-QK-BsQ" secondAttribute="leading" id="M7Z-pD-gY3"/>
+                            <constraint firstItem="a7K-QK-BsQ" firstAttribute="top" secondItem="s5V-no-ayd" secondAttribute="bottom" constant="7" id="PDC-oF-0m2"/>
+                            <constraint firstItem="Dth-Ws-KgH" firstAttribute="trailing" secondItem="NbD-oo-2XY" secondAttribute="trailing" id="TY2-h3-mTw"/>
+                            <constraint firstItem="kpM-Uy-vab" firstAttribute="trailing" secondItem="s5V-no-ayd" secondAttribute="trailing" id="WaZ-IU-QT5"/>
+                            <constraint firstItem="kpM-Uy-vab" firstAttribute="leading" secondItem="s5V-no-ayd" secondAttribute="leading" id="ZyX-z2-7ly"/>
+                            <constraint firstItem="s5V-no-ayd" firstAttribute="trailing" secondItem="a7K-QK-BsQ" secondAttribute="trailing" id="bWo-Tu-f6B"/>
+                            <constraint firstItem="sTm-pL-dIc" firstAttribute="top" secondItem="5y2-jj-uLT" secondAttribute="bottom" constant="90" id="btU-WN-q2Z"/>
+                            <constraint firstItem="NbD-oo-2XY" firstAttribute="bottom" secondItem="Dth-Ws-KgH" secondAttribute="bottom" id="dza-ca-e24"/>
+                            <constraint firstItem="sTm-pL-dIc" firstAttribute="trailing" secondItem="kpM-Uy-vab" secondAttribute="trailing" id="fLS-6m-swA"/>
+                            <constraint firstItem="Dth-Ws-KgH" firstAttribute="leading" secondItem="NbD-oo-2XY" secondAttribute="leading" id="hhA-cu-91P"/>
+                            <constraint firstItem="s5V-no-ayd" firstAttribute="top" secondItem="kpM-Uy-vab" secondAttribute="bottom" constant="8" symbolic="YES" id="nK2-Zu-iIZ"/>
+                            <constraint firstItem="5y2-jj-uLT" firstAttribute="leading" secondItem="NbD-oo-2XY" secondAttribute="leading" constant="10" id="nWC-qo-HOZ"/>
+                            <constraint firstItem="kpM-Uy-vab" firstAttribute="top" secondItem="sTm-pL-dIc" secondAttribute="bottom" constant="7" id="qpl-gM-iRO"/>
+                            <constraint firstItem="NbD-oo-2XY" firstAttribute="trailing" secondItem="5y2-jj-uLT" secondAttribute="trailing" constant="22" id="zq4-QO-gu8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NbD-oo-2XY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ixz-en-wpV"/>
+                    <connections>
+                        <outlet property="bankField" destination="kpM-Uy-vab" id="Xjw-lh-cX3"/>
+                        <outlet property="currentMoneyTextField" destination="5y2-jj-uLT" id="yk4-eu-POr"/>
+                        <outlet property="moneyField" destination="a7K-QK-BsQ" id="8XV-Uo-3CK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PII-2W-a9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3649" y="1481"/>
         </scene>
     </scenes>
     <resources>

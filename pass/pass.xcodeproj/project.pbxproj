@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55C05A4621319A9800D7273E /* ChargeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C05A4521319A9800D7273E /* ChargeInfoViewController.swift */; };
 		BF15CBA50EC5F70DF45A6CC4 /* Pods_pass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E50F9C81415E984F06C146 /* Pods_pass.framework */; };
 		E5D209112130444F00232F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D209102130444F00232F61 /* AppDelegate.swift */; };
 		E5D209132130444F00232F61 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D209122130444F00232F61 /* EntryViewController.swift */; };
@@ -65,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		017667527B51668F6FB5A8CB /* Pods-pass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pass.release.xcconfig"; path = "Pods/Target Support Files/Pods-pass/Pods-pass.release.xcconfig"; sourceTree = "<group>"; };
+		55C05A4521319A9800D7273E /* ChargeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeInfoViewController.swift; sourceTree = "<group>"; };
 		B79954129C651994725C532C /* Pods-pass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pass/Pods-pass.debug.xcconfig"; sourceTree = "<group>"; };
 		C9E50F9C81415E984F06C146 /* Pods_pass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5D2090D2130444F00232F61 /* pass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pass.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +291,7 @@
 			children = (
 				E5D2097621311FFD00232F61 /* UserViewController.swift */,
 				E5D2098D2131688100232F61 /* PassViewController.swift */,
+				55C05A4521319A9800D7273E /* ChargeInfoViewController.swift */,
 			);
 			path = UserPage;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				E5D209402130505C00232F61 /* API.swift in Sources */,
 				E5D2094C213050D500232F61 /* AWSUserDAO.swift in Sources */,
 				E5D20948213050AC00232F61 /* MarketDAO.swift in Sources */,
+				55C05A4621319A9800D7273E /* ChargeInfoViewController.swift in Sources */,
 				E5D2098C2131507900232F61 /* Format.swift in Sources */,
 				E5D209112130444F00232F61 /* AppDelegate.swift in Sources */,
 				E5D2096C2130661300232F61 /* AppTest.swift in Sources */,
