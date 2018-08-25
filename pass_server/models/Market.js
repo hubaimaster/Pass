@@ -32,17 +32,17 @@ var marketSchema = mongoose.Schema({
   }
 })
 // create a new pass
-marketSchema.statics.createPass = function(payload){
-  console.log("created new pass")
+marketSchema.statics.createMarket = function(payload){
+  console.log("created new market")
 
-  var pass = new this(payload)
+  var market = new this(payload)
 
-  return pass.save()
+  return market.save()
 }
 
 // find one pass
 marketSchema.statics.findOneById = function(id){
-  console.log("Searching a pass",id)
+  console.log("Searching a market",id)
 
   return this.findOne({id})
 }
