@@ -1005,6 +1005,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZY1-So-CY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5269.6000000000004" y="778.56071964017997"/>
+        </scene>
         <!--충전하기 Scene-->
         <scene sceneID="I8m-NU-SfL">
             <objects>
