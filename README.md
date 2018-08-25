@@ -35,7 +35,7 @@
     - ### Post: 유저 로그인 ###
      + route: /user/login
      + request: {email:String, password:String}
-     + response: {success:Boolean}
+     + response: {id: String, creationDate: Int, name: String, password: String, group: String, email: String, money: Int, marketId: String}
   * ## Market ##
     - ### Post: 사업장생성 ###
      + request: {userId:String, name:String, bankName:String, accountNumber:String, lat:Double, lng:Double}
