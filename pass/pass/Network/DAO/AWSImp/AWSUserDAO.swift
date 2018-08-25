@@ -11,7 +11,21 @@ import Foundation
 class AWSUserDAO: UserDAO {
     
     var user: User!
-    
+    func charge(email: String, amount: Int) -> Void
+    {
+        let baseUrl = "http://ec2-13-125-93-119.ap-northeast-2.compute.amazonaws.com:3000/user"
+        let params = ["userId": email, "money": amount] as [String : Any]
+        
+        API.http.put(url: baseUrl, params: params, callback: { (data) in
+            print("data: " + data!)
+            if let json = JsonUtil.stringToJson(string: data), let success = json["success"].bool, success{
+                //callback(true)
+            }else{
+                //callback(false)
+            }
+            
+        })
+    }
     func signUp(email: String, password: String, group: String, callback: @escaping (Bool) -> Void) {
         let baseUrl = "http://ec2-13-125-93-119.ap-northeast-2.compute.amazonaws.com:3000/user/register"
         let params = ["email": email, "password": password, "group": group]

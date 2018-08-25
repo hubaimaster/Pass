@@ -18,13 +18,24 @@ class WatingViewController: UIViewController {
         return vc
     }
     
+    @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { (timer) in
+       
+            Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { (timer) in
             self.check(timer: timer)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let tableName = pass.tableName, let money = pass.money{
+            infoLabel.text = "테이블 \(tableName)\n" + "\(money) 원"
+        }
+        
     }
     
     func check(timer: Timer){

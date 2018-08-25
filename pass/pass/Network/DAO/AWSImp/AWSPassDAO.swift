@@ -61,7 +61,7 @@ class AWSPassDAO: PassDAO {
     
     func put(passId: String, callback: @escaping (Bool) -> Void) {
         let params: [String: Any] = ["passId": passId]
-        API.http.delete(url: baseUrl, params: params) { (data) in
+        API.http.put(url: baseUrl, params: params) { (data) in
             if let json = JsonUtil.stringToJson(string: data), let success = json["success"].bool, success{
                 callback(true)
             }else{
