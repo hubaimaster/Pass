@@ -48,6 +48,25 @@ marketSchema.statics.findOneById = function(marketId){
   return this.findOne({id:marketId})
 }
 
+marketSchema.statics.findUsersMarket = function(userId){
+  console.log("Searching a user's marketlist",userId)
+
+  return this.find({userId})
+}
+
+marketSchema.statics.findNearMarket = function(lat,lng){
+  console.log("Searching near marketlist",lat,lng)
+
+  var geospartial = {type:"Point",coordinates:[lng,lat]}
+
+  return this.find({location: {
+                      $near: {
+                        $maxDistance: 20,
+                        $geometry: geospartial
+                      }
+                    }
+                  })
+}
 
 var Market = mongoose.model("market",marketSchema)
 

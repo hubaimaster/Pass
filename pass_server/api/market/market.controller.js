@@ -46,6 +46,40 @@ exports.marketInfo = (req,res) => {
 
 // PATCH
 // find near markets' list by location
-exports.marketList = (req,res) => {
-  res.send("Market List")
+exports.nearMarketList = (req,res) => {
+  var {lat,lng} = req.body
+
+  var onSuccess = (marketList) => {
+    console.log(marketList)
+    res.status(200).json(util.successTrue(market))
+  }
+
+  var onError = (error) => {
+    console.error(error)
+    res.status(400).json(util.successFalse(error))
+  }
+
+  market.findNearMarket(lat,lng)
+  .then(onSuccess)
+  .catch(onError)
+}
+
+// PATCH
+// find users' markets' list
+exports.usersMarketList = (req,res) => {
+  var userId = req.param.userId
+
+  var onSuccess = (marketList) => {
+    console.log(marketList)
+    res.status(200).json(util.successTrue(market))
+  }
+
+  var onError = (error) => {
+    console.error(error)
+    res.status(400).json(util.successFalse(error))
+  }
+
+  market.findUsersMarket(userId)
+  .then(onSuccess)
+  .catch(onError)
 }
