@@ -38,6 +38,11 @@
 		E5D2097F213120A800232F61 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2097E213120A800232F61 /* CellModel.swift */; };
 		E5D20981213120E600232F61 /* MarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D20980213120E600232F61 /* MarketCell.swift */; };
 		E5D209832131319800232F61 /* AddMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D209822131319800232F61 /* AddMarketViewController.swift */; };
+		E5D20985213147DC00232F61 /* DetailMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D20984213147DC00232F61 /* DetailMarketViewController.swift */; };
+		E5D2098821314AB100232F61 /* PassCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2098721314AB100232F61 /* PassCellModel.swift */; };
+		E5D2098A21314ABA00232F61 /* PassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2098921314ABA00232F61 /* PassCell.swift */; };
+		E5D2098C2131507900232F61 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2098B2131507900232F61 /* Format.swift */; };
+		E5D2098E2131688100232F61 /* PassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D2098D2131688100232F61 /* PassViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +102,11 @@
 		E5D2097E213120A800232F61 /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
 		E5D20980213120E600232F61 /* MarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCell.swift; sourceTree = "<group>"; };
 		E5D209822131319800232F61 /* AddMarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMarketViewController.swift; sourceTree = "<group>"; };
+		E5D20984213147DC00232F61 /* DetailMarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMarketViewController.swift; sourceTree = "<group>"; };
+		E5D2098721314AB100232F61 /* PassCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCellModel.swift; sourceTree = "<group>"; };
+		E5D2098921314ABA00232F61 /* PassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCell.swift; sourceTree = "<group>"; };
+		E5D2098B2131507900232F61 /* Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
+		E5D2098D2131688100232F61 /* PassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,11 +179,11 @@
 			children = (
 				E5D209692130648900232F61 /* Config.swift */,
 				E5D2096B2130661300232F61 /* AppTest.swift */,
+				E5D2098B2131507900232F61 /* Format.swift */,
 				E5D2097A2131205700232F61 /* Cell */,
 				E5D2096D2130CAC100232F61 /* VC */,
 				E5D2093E2130504900232F61 /* Network */,
 				E5D209102130444F00232F61 /* AppDelegate.swift */,
-				E5D209142130444F00232F61 /* Main.storyboard */,
 				E5D209172130445000232F61 /* Assets.xcassets */,
 				E5D209192130445000232F61 /* LaunchScreen.storyboard */,
 				E5D2091C2130445000232F61 /* Info.plist */,
@@ -262,6 +272,7 @@
 		E5D2096D2130CAC100232F61 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				E5D209142130444F00232F61 /* Main.storyboard */,
 				E5D2097521311FE600232F61 /* ManagerPage */,
 				E5D2097421311FDF00232F61 /* UserPage */,
 				E5D209122130444F00232F61 /* EntryViewController.swift */,
@@ -275,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				E5D2097621311FFD00232F61 /* UserViewController.swift */,
+				E5D2098D2131688100232F61 /* PassViewController.swift */,
 			);
 			path = UserPage;
 			sourceTree = "<group>";
@@ -284,6 +296,7 @@
 			children = (
 				E5D209782131202400232F61 /* ManagerViewController.swift */,
 				E5D209822131319800232F61 /* AddMarketViewController.swift */,
+				E5D20984213147DC00232F61 /* DetailMarketViewController.swift */,
 			);
 			path = ManagerPage;
 			sourceTree = "<group>";
@@ -292,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				E5D2097E213120A800232F61 /* CellModel.swift */,
+				E5D2098621314AA300232F61 /* Pass */,
 				E5D2097B2131208A00232F61 /* Market */,
 			);
 			path = Cell;
@@ -304,6 +318,15 @@
 				E5D20980213120E600232F61 /* MarketCell.swift */,
 			);
 			path = Market;
+			sourceTree = "<group>";
+		};
+		E5D2098621314AA300232F61 /* Pass */ = {
+			isa = PBXGroup;
+			children = (
+				E5D2098721314AB100232F61 /* PassCellModel.swift */,
+				E5D2098921314ABA00232F61 /* PassCell.swift */,
+			);
+			path = Pass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,17 +516,21 @@
 				E5D20971213109DC00232F61 /* LoginViewController.swift in Sources */,
 				E5D2097D213120A000232F61 /* MarketCellModel.swift in Sources */,
 				E5D20967213063EF00232F61 /* Network.swift in Sources */,
+				E5D2098E2131688100232F61 /* PassViewController.swift in Sources */,
 				E5D209132130444F00232F61 /* EntryViewController.swift in Sources */,
 				E5D2094E213050DD00232F61 /* AWSPassDAO.swift in Sources */,
 				E5D2096A2130648900232F61 /* Config.swift in Sources */,
 				E5D2097721311FFD00232F61 /* UserViewController.swift in Sources */,
 				E5D209792131202400232F61 /* ManagerViewController.swift in Sources */,
+				E5D2098A21314ABA00232F61 /* PassCell.swift in Sources */,
 				E5D20950213050E900232F61 /* AWSMarketDAO.swift in Sources */,
 				E5D209402130505C00232F61 /* API.swift in Sources */,
 				E5D2094C213050D500232F61 /* AWSUserDAO.swift in Sources */,
 				E5D20948213050AC00232F61 /* MarketDAO.swift in Sources */,
+				E5D2098C2131507900232F61 /* Format.swift in Sources */,
 				E5D209112130444F00232F61 /* AppDelegate.swift in Sources */,
 				E5D2096C2130661300232F61 /* AppTest.swift in Sources */,
+				E5D2098821314AB100232F61 /* PassCellModel.swift in Sources */,
 				E5D209832131319800232F61 /* AddMarketViewController.swift in Sources */,
 				E5D2097F213120A800232F61 /* CellModel.swift in Sources */,
 				E5D20981213120E600232F61 /* MarketCell.swift in Sources */,
@@ -512,6 +539,7 @@
 				E5D209732131111C00232F61 /* JsonUtil.swift in Sources */,
 				E5D20961213055A200232F61 /* Pass.swift in Sources */,
 				E5D2096F2130CAE900232F61 /* RegisterViewController.swift in Sources */,
+				E5D20985213147DC00232F61 /* DetailMarketViewController.swift in Sources */,
 				E5D2095F2130559B00232F61 /* User.swift in Sources */,
 				E5D209442130509B00232F61 /* UserDAO.swift in Sources */,
 				E5D20963213055AA00232F61 /* Market.swift in Sources */,

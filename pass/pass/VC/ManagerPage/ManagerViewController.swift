@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import ActionKit
+import UIScrollView_InfiniteScroll
 
 class ManagerViewController: UITableViewController {
     
@@ -16,13 +17,28 @@ class ManagerViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         prepare()
+        self.tableView.refreshControl = UIRefreshControl()
+        self.tableView.refreshControl?.addControlEvent(.valueChanged, {
+            self.tableView.refreshControl?.beginRefreshing()
+            self.prepare()
+            self.tableView.refreshControl?.endRefreshing()
+        })
     }
     
     @IBAction func logout(_ sender: Any) {
         API.model.user.logout { (_) in
             self.navigationController?.dismiss(animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func addMarket(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: Config.vc.AddMarketViewController)
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     func prepare(){
@@ -82,25 +98,19 @@ class ManagerViewController: UITableViewController {
         return CGFloat(92)
     }
     
-    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let screen = UIScreen().bounds
-        let width = screen.width
-        let height = screen.width / 1.7
-        
-        let addButton = UIButton(frame: CGRect(x: 0, y: 0, width: width, height: height))
-        addButton.setTitle("식당 추가", for: .normal)
-        addButton.setImage(#imageLiteral(resourceName: "baseline_add_black_36pt"), for: .normal)
-        addButton.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold)
-        addButton.setTitleColor(Config.color.primaryTint, for: .normal)
-        addButton.addControlEvent(UIControlEvents.touchUpInside) {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: Config.vc.AddMarketViewController)
-            self.navigationController?.pushViewController(vc!, animated: true)
-        }
-        return addButton
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat(1)
     }
     
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return CGFloat(120)
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let data = datas[indexPath.item] as? MarketCellModel{
+            let vc = DetailMarketViewController.getInstance(market: data.market)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }

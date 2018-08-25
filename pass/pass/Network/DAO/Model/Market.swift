@@ -23,7 +23,6 @@ class Market {
     
     init(json: JSON) {
         let json = json["data"]
-        print("json:\(json)")
         self.id = json["_id"].string
         self.creationDate = json["creationDate"].int
         self.name = json["name"].string

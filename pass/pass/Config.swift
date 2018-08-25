@@ -16,6 +16,10 @@ struct Config {
         static let secondaryTint = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
     
+    struct sb {
+        static let Main = "Main"
+    }
+    
     struct vc {
         static let EntryViewController = "EntryViewController"
         static let RegisterViewController = "RegisterViewController"
@@ -25,10 +29,14 @@ struct Config {
         static let ManagerPage = "ManagerPage"
         
         static let AddMarketViewController = "AddMarketViewController"
+        static let DetailMarketViewController = "DetailMarketViewController"
+        static let UserViewController = "UserViewController"
+        static let PassViewController = "PassViewController"
     }
     
     struct cell {
         static let MarketCell = "MarketCell"
+        static let PassCell = "PassCell"
     }
     
 }

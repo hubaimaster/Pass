@@ -12,6 +12,7 @@ import UIKit
 
 class MarketCellModel: CellModel {
     
+    var market: Market!
     var name: String!
     var desc: String!
     var image: UIImage!
@@ -26,6 +27,7 @@ class MarketCellModel: CellModel {
     }
     
     init(market: Market) {
+        self.market = market
         self.name = market.name
         self.desc = market.desc
         self.image = MarketCellModel.getImage()
