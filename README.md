@@ -4,11 +4,9 @@
   * ## User ##
    - id: String (UUID4)
    - creationDate: Int (Unixtime)
-   - name: String 
    - password: String
    - group: "user" | "manager"
    - email: String (로그인할때 사용)
-   - marketId: String (사장님이 가게 등록할경우 사용)
    - money: Int
   * ## Market ##
    - id: String (UUID4)
@@ -35,7 +33,7 @@
     - ### Post: 유저 로그인 ###
      + route: /user/login
      + request: {email:String, password:String}
-     + response: {success:Boolean}
+     + response: {id: String, creationDate: Int, name: String, password: String, group: String, email: String, money: Int, marketId: String}
   * ## Market ##
     - ### Post: 사업장생성 ###
      + request: {userId:String, name:String, bankName:String, accountNumber:String, lat:Double, lng:Double}
@@ -44,7 +42,12 @@
      + request: {marketId:String}
      + response: {id:String, creationDate:Int, name:String, bankName:String, accountNumber:String, lat:Double, lng:Double, userId: String}
     - ### Patch: 가까운 사업장 리스트 가져오기 (market id list) ###
+     + route: /market/near
      + request: {lat:Double, lng:Double}
+     + response: {items: [String, ...]}
+    - ### Patch: user의 사업장 리스트 가져오기 (market id list) ###
+     + route: /market/users
+     + request: {userId:String}
      + response: {items: [String, ...]}
   * ## Pass ##
     - ### Post: 결제 이벤트 발생 ###
