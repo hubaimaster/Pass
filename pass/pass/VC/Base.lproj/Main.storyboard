@@ -973,33 +973,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="승인을 기다리는중..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzq-ek-Hhb">
-                                <rect key="frame" x="16" y="20" width="343" height="627"/>
+                                <rect key="frame" x="16" y="294" width="343" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="oND-6o-s52"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O12-ic-PzI">
                                 <rect key="frame" x="317" y="39" width="22" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="daR-IV-Ocn"/>
-                                    <constraint firstAttribute="width" constant="22" id="vaJ-xu-COZ"/>
-                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="테이블 21 1000원" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAw-cp-vMy">
+                                <rect key="frame" x="16" y="246" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nu3-sb-js3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5xm-Su-XXS" firstAttribute="trailing" secondItem="O12-ic-PzI" secondAttribute="trailing" constant="36" id="6wh-bm-lzq"/>
-                            <constraint firstItem="5xm-Su-XXS" firstAttribute="trailing" secondItem="lzq-ek-Hhb" secondAttribute="trailing" constant="16" id="Hfv-Lv-qCG"/>
-                            <constraint firstItem="O12-ic-PzI" firstAttribute="top" secondItem="5xm-Su-XXS" secondAttribute="top" constant="19" id="KpQ-wx-RW5"/>
-                            <constraint firstItem="lzq-ek-Hhb" firstAttribute="leading" secondItem="5xm-Su-XXS" secondAttribute="leading" constant="16" id="Z4d-Uu-GWJ"/>
-                            <constraint firstItem="lzq-ek-Hhb" firstAttribute="top" secondItem="5xm-Su-XXS" secondAttribute="top" id="a5R-O8-o5h"/>
-                            <constraint firstItem="5xm-Su-XXS" firstAttribute="bottom" secondItem="lzq-ek-Hhb" secondAttribute="bottom" constant="20" id="d3u-ci-SXk"/>
+                            <constraint firstItem="O12-ic-PzI" firstAttribute="leading" secondItem="5xm-Su-XXS" secondAttribute="leading" constant="317" id="DqE-ra-ZHo"/>
+                            <constraint firstItem="O12-ic-PzI" firstAttribute="top" secondItem="5xm-Su-XXS" secondAttribute="top" constant="19" id="LLf-pA-n5d"/>
+                            <constraint firstItem="LAw-cp-vMy" firstAttribute="leading" secondItem="v2b-p1-aMR" secondAttribute="leadingMargin" id="M9a-cp-e9c"/>
+                            <constraint firstItem="LAw-cp-vMy" firstAttribute="trailing" secondItem="v2b-p1-aMR" secondAttribute="trailingMargin" id="Nmh-4H-D7X"/>
+                            <constraint firstItem="LAw-cp-vMy" firstAttribute="leading" secondItem="lzq-ek-Hhb" secondAttribute="leading" id="Unn-bw-qeb"/>
+                            <constraint firstItem="5xm-Su-XXS" firstAttribute="bottom" secondItem="lzq-ek-Hhb" secondAttribute="bottom" constant="289" id="d7s-cV-iiW"/>
+                            <constraint firstItem="5xm-Su-XXS" firstAttribute="bottom" secondItem="LAw-cp-vMy" secondAttribute="bottom" constant="371" id="iDK-Yx-YlI"/>
+                            <constraint firstItem="LAw-cp-vMy" firstAttribute="trailing" secondItem="lzq-ek-Hhb" secondAttribute="trailing" id="vma-VZ-Kdm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5xm-Su-XXS"/>
                     </view>
                     <connections>
-                        <outlet property="statusLabel" destination="lzq-ek-Hhb" id="a5L-pc-rDE"/>
+                        <outlet property="infoLabel" destination="LAw-cp-vMy" id="WgT-rU-Zx2"/>
+                        <outlet property="statusLabel" destination="lzq-ek-Hhb" id="Lln-lj-8y5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZY1-So-CY7" userLabel="First Responder" sceneMemberID="firstResponder"/>

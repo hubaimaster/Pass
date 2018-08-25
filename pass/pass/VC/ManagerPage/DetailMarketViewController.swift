@@ -117,7 +117,7 @@ class DetailMarketViewController: UITableViewController {
         view.backgroundColor = .white
         let headerLabel = UILabel(frame: CGRect(x: 20, y: 20, width: 1000, height: 30))
         if let name = market.name{
-            headerLabel.text = "\(name), 당일 매출"
+            headerLabel.text = "\(name), 매출"
             headerLabel.font = UIFont.systemFont(ofSize: 24, weight: UIFont.Weight.light)
         }
         if moneyLabel != nil{
@@ -135,10 +135,11 @@ class DetailMarketViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let data = datas[indexPath.item] as? PassCellModel{
             if let passId = data.pass.id{
-                API.model.pass.put(passId: passId) { (_) in
+                print("passId:\(passId)")
+                API.model.pass.put(passId: passId) { (success) in
                     self.removeAll(completion: { (_) in
                         self.prepare()
-                    })
+                    }) //093d45c4
                 }
             }
         }
