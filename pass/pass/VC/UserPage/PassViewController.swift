@@ -45,7 +45,13 @@ class PassViewController: UIViewController {
                 API.model.pass.create(userId: myId, marketId: marketId, money: _money, tableName: tableName, callback: { (pass) in
                     if let pass = pass{
                         let vc = WatingViewController.getInstance(pass: pass)
+                        if(pass.status == 0)
+                        {
                         self.present(vc, animated: true, completion: nil)
+                        }else
+                        {
+                             JDStatusBarNotification.show(withStatus: "지불 실패!", dismissAfter: 5) 
+                        }
                     }else{
                         JDStatusBarNotification.show(withStatus: "지불 실패!", dismissAfter: 5)
                     }
