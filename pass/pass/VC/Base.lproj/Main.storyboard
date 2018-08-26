@@ -1101,6 +1101,7 @@
                     <navigationItem key="navigationItem" id="ixz-en-wpV"/>
                     <connections>
                         <outlet property="bankField" destination="kpM-Uy-vab" id="Xjw-lh-cX3"/>
+                        <outlet property="chargeButton" destination="Dth-Ws-KgH" id="e1H-gu-gp3"/>
                         <outlet property="currentMoneyTextField" destination="5y2-jj-uLT" id="yk4-eu-POr"/>
                         <outlet property="moneyField" destination="a7K-QK-BsQ" id="8XV-Uo-3CK"/>
                         <segue destination="mcb-KF-02d" kind="push" identifier="chargeSuccess" id="jH4-iw-LeA"/>

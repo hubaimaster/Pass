@@ -12,8 +12,9 @@ import MapKit
 import CoreLocation
 import JDStatusBarNotification
 
-class ChargeInfoViewController: UIViewController {
+class ChargeInfoViewController: UIViewController, UITextFieldDelegate{
   
+    @IBOutlet weak var chargeButton: UIButton!
     @IBOutlet weak var currentMoneyTextField: UILabel!
     @IBOutlet weak var bankField: UITextField!
     @IBOutlet weak var moneyField: UITextField!
@@ -26,8 +27,34 @@ class ChargeInfoViewController: UIViewController {
         moneyField.borderStyle = .none
        
         updateCurrentMoney()
+        bankField.delegate = self
+        moneyField.delegate = self
         
     }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    //This is for the keyboard to GO AWAYY !! when user clicks anywhere on the view
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
+    //This is for the keyboard to GO AWAYY !! when user clicks "Return" key  on the keyboard
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
     func updateCurrentMoney()
     {
         
@@ -76,4 +103,7 @@ class ChargeInfoViewController: UIViewController {
             }
         }
     }
+    
+    
+    
 }
