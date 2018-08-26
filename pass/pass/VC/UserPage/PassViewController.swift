@@ -50,7 +50,7 @@ class PassViewController: UIViewController {
                         self.present(vc, animated: true, completion: nil)
                         }else
                         {
-                             JDStatusBarNotification.show(withStatus: "지불 실패!", dismissAfter: 5) 
+                             JDStatusBarNotification.show(withStatus: "지불 실패! 금액 부족!", dismissAfter: 5) 
                         }
                     }else{
                         JDStatusBarNotification.show(withStatus: "지불 실패!", dismissAfter: 5)
